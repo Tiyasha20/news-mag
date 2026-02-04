@@ -18,12 +18,30 @@ const Newsboard = ({category}) => {
       });
   }, [category]);
   return (
-    <div>
-      <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
-      {articles.map((news,index)=>{
-        return <Newsitem key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url}/>
-      })}
+    <div className="container my-4">
+
+    <h2 className="text-center mb-4">
+      Latest <span className="badge bg-danger">News</span>
+    </h2>
+
+    <div className="row g-4">
+
+      {articles.map((news, index) => (
+        <div
+          className="col-12 col-sm-6 col-md-4 col-lg-3"
+          key={index}
+        >
+          <Newsitem
+            title={news.title}
+            description={news.description}
+            src={news.urlToImage}
+            url={news.url}
+          />
+        </div>
+      ))}
+
     </div>
+  </div>
   )
 }
 

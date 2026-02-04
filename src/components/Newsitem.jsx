@@ -1,7 +1,7 @@
 import image from '../assets/news.png'
 const Newsitem = ({title,description,src,url}) => {
   return (
-    <div className="card bg-dark text-light h-100 shadow" >
+    <div className="card bg-dark text-light h-100 shadow w-100" >
   <img 
   src={src?src:image} 
   style={{ height: "180px", objectFit: "cover" }} 
